@@ -7,21 +7,23 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import Login from "./components/Login";
 // import SignUp from "./components/SignUp";
 
-import home from './home';
+import Home from './home';
 
-import login from './login';
+import Login from './login';
 import Signup from './Signup';
+// import AboutUs from "./AboutUs";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<home />} />
+        <Route path="/" element={<Home />} />
         {/* <Route path="/about" element={<AboutUs />} />
         <Route path="/all-features" element={<AllFeatures />} />
         <Route path="/feature/:id" element={<ParticularFeature />} /> */}
-        <Route path="/login" element={<login />} />
-        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+        {/* <Route path="/signup" element={<SignUp />} /> */}
+        
       </Routes>
     </Router>
   );

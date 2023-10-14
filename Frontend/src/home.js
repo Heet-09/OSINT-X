@@ -1,5 +1,6 @@
 import React from "react";
 import Component from "./Component";
+import Navbar from "./components/Navbar";
 
 const styles = {
   teamSection: {
@@ -19,7 +20,7 @@ const styles = {
   },
 };
 
-function home() {
+function Home() {
 
   const handleComponentClick = (text) => {
     // Handle the click event, e.g., by showing an alert with the text
@@ -41,20 +42,53 @@ function home() {
       <div style={styles.heading}>
         <h1 style={{ margin: 0 }}>Features:</h1>
       </div>
+        <Navbar />
       <div style={styles.wrapSection}>
-        <Component text={"Social media hunting using image"} onClick={() => handleComponentClick("GG")} image={socialMediaImage} />
-        <Component text={"Trace Single IP"} onClick={() => handleComponentClick("GG2")} image={traceipImage} />
-        <Component text={"Heatmap"} onClick={() => handleComponentClick("GG3")} image={heatmapImage} />
-        <Component text={"URL redirection checker"} onClick={() => handleComponentClick("GG4")} image={urlImage} />
+        <Component
+          text={"Social media hunting using image"}
+          onClick={() => handleComponentClick("GG")}
+          image={socialMediaImage}
+        />
+        <Component
+          text={"Trace Single IP"}
+          onClick={() => handleComponentClick("GG2")}
+          image={traceipImage}
+        />
+        <Component
+          text={"Heatmap"}
+          onClick={() => handleComponentClick("GG3")}
+          image={heatmapImage}
+        />
+        <Component
+          text={"URL redirection checker"}
+          onClick={() => handleComponentClick("GG4")}
+          image={urlImage}
+        />
       </div>
       <div style={styles.wrapSection}>
-        <Component text={"PDF meta data analysis"} onClick={() => handleComponentClick("GG")} image={pdfImage} />
-        <Component text={"URL lookup in webpages"} onClick={() => handleComponentClick("GG2")} image={urlImage} />
-        <Component text={"Information Gathering using Name"} onClick={() => handleComponentClick("GG4")} image={personImage} />
-        <Component text={"Phonenumber verifier"} onClick={() => handleComponentClick("GG3")} image={phoneImage} />
+        <Component
+          text={"PDF meta data analysis"}
+          onClick={() => handleComponentClick("GG")}
+          image={pdfImage}
+        />
+        <Component
+          text={"URL lookup in webpages"}
+          onClick={() => handleComponentClick("GG2")}
+          image={urlImage}
+        />
+        <Component
+          text={"Information Gathering using Name"}
+          onClick={() => handleComponentClick("GG4")}
+          image={personImage}
+        />
+        <Component
+          text={"Phonenumber verifier"}
+          onClick={() => handleComponentClick("GG3")}
+          image={phoneImage}
+        />
       </div>
     </div>
   );
 }
 
-export default home;
+export default Home;
