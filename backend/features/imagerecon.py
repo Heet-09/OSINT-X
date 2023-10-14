@@ -12,8 +12,7 @@ red="\033[1;31;40m"
 Y = '\033[1;33;40m'
 G = "\033[1;32;40m"  
 
-def recon():
-    image=input(cyan+"Enter the image path >> ")
+def recon(image):
     image_name = os.path.basename(image)
     access_token = 'sl.BnfFX3k0IiJwHEX3EYxagJa5Z8fmtzbvkOvO18E8-IHxPfq8-mhAZLsgIKATW4aTktkGpOyYayJMviRuETPnngsTix2RiS-AVgLtMMT5j1dv9VGn9jdLr57y3cem5u5be_6frzoD0kEhEWQ'
     try:  
@@ -87,7 +86,8 @@ def recon():
             print(red + "No social media links associated with this image")    
 
         spinner.stop()
+        return linklist
     except Exception as e:
-        print(e)
+        return e
 if __name__ == "__main__":
     recon()
